@@ -1,0 +1,39 @@
+@mixin btnColors($primary, $secondary) {
+  background-color: $primary;
+  svg path {
+    stroke: $secondary;
+  }
+
+  &:hover {
+    background-color: $secondary;
+    svg path {
+      stroke: $primary;
+    }
+  }
+}
+
+%btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 26px 54px;
+  border-radius: 18px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  svg path {
+    transition: all 0.2s ease-in-out;
+  }
+  &--large {
+    display: block;
+    padding: 26px 66px;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+}
+

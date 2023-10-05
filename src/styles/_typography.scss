@@ -1,0 +1,113 @@
+@import "@assets/fonts/_fonts.scss";
+
+@mixin DMSans($fz) {
+  font-family: 'DM Sans';
+  font-size: $fz;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+@mixin Jost($fz, $fs:normal, $fw:400) {
+  font-family: 'Jost';
+  font-size: $fz;
+  font-style: $fs;
+  font-weight: $fw;
+  line-height: 1.5;
+}
+
+%grand {
+  @include DMSans(250px);
+}
+%mark {
+  font-family: 'DM Sans';
+  font-size: 200px;
+  line-height: 85px;
+}
+%statsTitle {
+  @include DMSans(85px);
+}
+
+%heroTitle {
+  @include DMSans(65px);
+}
+
+%logo {
+  @include DMSans(40px);
+}
+
+%heading1 {
+  @include DMSans(50px);
+}
+
+%heading2 {
+  @include DMSans(35px);
+}
+
+%heading3 {
+  @include DMSans(25px);
+}
+
+%heading4 {
+  @include DMSans(22px);
+}
+
+%heading5 {
+  @include DMSans(20px);
+}
+
+%heading6 {
+  @include DMSans(18px);
+}
+
+%link {
+  text-decoration: none;
+}
+
+%paragraphLarge {
+  @include Jost(22px);
+  letter-spacing: 0.22px;
+  line-height: 1.5;
+}
+
+%paragraphMedium {
+  @include Jost(20px);
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+}
+
+%paragraphSmall {
+  @include Jost(18px);
+  letter-spacing: 0.18px;
+  line-height: 1.5;
+}
+
+%paragraphXs {
+  @include Jost(16px);
+  letter-spacing: 0.16px;
+  line-height: 1.5;
+}
+
+%btnText {
+  @include Jost(18px, $fw:600);
+}
+
+%paragraphBold {
+  @include Jost(22px, $fw:700);
+}
+
+%paragraphItalic {
+  @include Jost(22px, $fs:italic);
+}
+
+@mixin linkColor($base, $hover, $active:#4D5053){
+  @extend %link;
+  color: $base;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: $hover;
+  }
+  &:active {
+    color: $active;
+  }
+}
